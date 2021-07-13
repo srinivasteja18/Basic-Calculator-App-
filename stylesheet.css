@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+:root,:root.blue{
+    --fontFamily : 'Spartan', sans-serif;
+    --mainBackground:hsl(222, 26%, 31%);
+    --toggleBackground:hsl(223, 31%, 20%);
+    --toggleInput:hsl(6, 63%, 50%);
+    --screenBackground:hsl(224, 36%, 15%);
+    --title-color:white;
+    --keys-color:hsl(221, 14%, 31%);
+    --resetBackground:hsl(225, 21%, 49%);
+    --equals-color:white;
+    --keysShadow: hsl(28, 16%, 65%);
+    --resetShadow:hsl(224, 28%, 35%);
+    --equalsShadow:hsl(6, 70%, 34%);
+    --keysBackground:hsl(30, 25%, 89%);
+}
+
+:root.white{
+    --mainBackground:hsl(0, 0%, 90%);
+    --toggleBackground:hsl(0, 5%, 81%);
+    --toggleInput:hsl(25, 98%, 40%);
+    --screenBackground:hsl(0, 0%, 93%);
+    --title-color:black;
+    --keys-color:hsl(221, 14%, 31%);
+    --resetBackground:hsl(185, 42%, 37%);
+    --equals-color:white;
+    --keysShadow: hsl(35, 11%, 61%);
+    --resetShadow:hsl(185, 58%, 25%);
+    --equalsShadow:hsl(25, 99%, 27%);
+    --keysBackground:hsl(45, 7%, 89%);
+}
+:root.purple{
+    --mainBackground:hsl(268, 75%, 9%);
+    --toggleBackground:hsl(268, 71%, 12%);
+    --toggleInput:hsl(176, 100%, 44%);
+    --screenBackground:hsl(268, 71%, 12%);
+    --title-color:hsl(52, 100%, 62%);
+    --keys-color:hsl(52, 100%, 62%);
+    --resetBackground: hsl(281, 89%, 26%);
+    --equals-color:hsl(198, 20%, 13%);
+    --keysShadow: hsl(285, 91%, 52%);
+    --resetShadow:hsl(285, 91%, 52%);
+    --equalsShadow:hsl(177, 92%, 70%);
+    --keysBackground:hsl(268, 47%, 21%);
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: var(--mainBackground);
+    font-family: var(--fontFamily);
+}
+.card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.theme{
+    display: flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+h2,h6{
+    color: var(--title-color);
+}
+.toggle{
+    margin-left: 1em;
+    
+}
+.switch-toggle {
+    background: var(--toggleBackground);
+    float: left;
+    border-radius: 15px;
+    max-height: 1em;
+    padding: 4px 5px;
+    cursor: pointer;
+ }
+ .switch-toggle input {
+   position: absolute;
+   opacity: 0;
+   padding: 1px;
+ }
+ .switch-toggle label{
+     display: inline-block;
+     border-radius: 10px;
+     height: 0.3em;
+     padding: 5px;
+     cursor: pointer;
+ }
+ .switch-toggle input + label {
+   padding: 5px;
+   color: var(--toggleBackground);
+   cursor: pointer;
+ }
+ .switch-toggle input:checked + label {
+   background: var(--toggleInput);
+ }
+ .text{
+     font-size: .7em;
+     color: var(--title-color);
+     margin-bottom: .2rem;
+ }
+.inputNumbers{
+    text-align: right;
+    font-size: 2.5em;
+    pointer-events: none;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    border: 0;
+    color: var(--title-color);
+    background-color: var(--screenBackground);
+    width: 100%;
+}
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: var(--toggleBackground);
+    margin-top:1em;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.numbers{
+    padding: 1em;
+    display: grid;
+    
+}
+.key{
+    padding: .7rem 1.2rem;
+    margin: 7px;
+    border:0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    font-family: var(--fontFamily);
+    font-size: 1.5em;
+    border-radius: 5px;
+    color: var(--keys-color);
+    box-shadow: 0 3px 5px var(--keysShadow);
+    background-color: var(--keysBackground);
+    cursor: pointer;
+}
+.reset, .equal{
+    grid-area: 5/span 2;
+}
+.del, .reset{
+    font-size: 1em;
+    color: white;
+    background-color: var(--resetBackground);
+    box-shadow: 0 3px 5px var(--resetShadow);
+}
+.equal{
+    background-color: var(--toggleInput);
+    color: var(--equals-color);
+    box-shadow: 0 3px 5px var(--equalsShadow);
+}
+
