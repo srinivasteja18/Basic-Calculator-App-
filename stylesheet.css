@@ -126,6 +126,7 @@ h2,h6{
     padding: 1rem;
     border-radius: 5px;
     display: flex;
+    justify-content: flex-end;
     border: 0;
     color: var(--title-color);
     background-color: var(--screenBackground);
