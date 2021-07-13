@@ -148,9 +148,10 @@ h2,h6{
     padding: .7rem 1.2rem;
     margin: 7px;
     border:0;
-    text-align: center;
     font-family: var(--fontFamily);
     font-size: 1.5em;
+    display:flex;
+    justify-content:center;
     border-radius: 5px;
     color: var(--keys-color);
     box-shadow: 0 3px 5px var(--keysShadow);
